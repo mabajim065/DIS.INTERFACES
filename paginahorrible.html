@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Peinados Súper Rosa</title>
+<style>
+  body {
+    background: pink;
+    font-family: Comic Sans MS, cursive;
+    animation: fondo 2s infinite alternate;
+    overflow: hidden;
+  }
+
+  @keyframes fondo {
+    0% { background: #ffb6c1; }
+    50% { background: #ff69b4; }
+    100% { background: #ff1493; }
+  }
+
+  /* ---------- SUSCRIPCIÓN ---------- */
+  #suscripcion {
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    background: hotpink;
+    padding: 40px;
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+    z-index: 2000;
+  }
+  #suscripcion .cerrar {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: deeppink;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  #suscripcion input, #suscripcion button {
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    margin: 10px;
+    font-size: 18px;
+    color: hotpink;
+  }
+
+  /* ---------- COOKIES ---------- */
+  #cookies {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 182, 193, 0.9);
+    z-index: 1500;
+    overflow: hidden;
+  }
+  .galleta {
+    position: absolute;
+    font-size: 40px;
+    animation: volar 6s linear infinite;
+  }
+  @keyframes volar {
+    from { transform: translateY(100vh) rotate(0deg); }
+    to { transform: translateY(-100vh) rotate(720deg); }
+  }
+  #aceptarCookies {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: hotpink;
+    color: white;
+    padding: 15px 30px;
+    font-size: 20px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    z-index: 2001;
+  }
+
+  /* ---------- EXAMEN COOKIES ---------- */
+  #examen {
+    display: none;
+    position: fixed;
+    top: 20%;
+    left: 20%;
+    width: 60%;
+    background: pink;
+    padding: 40px;
+    border: 5px dashed deeppink;
+    z-index: 2002;
+    animation: colores 1s infinite alternate;
+  }
+  #examen label {
+    display: block;
+    margin: 10px 0;
+  }
+
+  /* ---------- FORMULARIO ---------- */
+  #formPelo {
+    display: none;
+    margin: 50px auto;
+    width: 60%;
+    background: linear-gradient(45deg, #ff69b4, #ff1493, #ffc0cb);
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 0 30px hotpink;
+    color: white;
+    text-align: center;
+    animation: colores 2s infinite alternate;
+  }
+  #formPelo input, #formPelo button {
+    display: block;
+    margin: 15px auto;
+    padding: 15px;
+    width: 80%;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+  }
+  #formPelo button {
+    background: white;
+    color: deeppink;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  @keyframes colores {
+    0% { color:#ffffff; background:#ff69b4; }
+    50% { color:#ff69b4; background:#ffc0cb; }
+    100% { color:#ffffff; background:#ff1493; }
+  }
+</style>
+</head>
+<body>
+
+<!-- PANTALLA DE SUSCRIPCIÓN -->
+<div id="suscripcion">
+  <button class="cerrar" onclick="moverSus()">X</button>
+  <h2>💌 Suscríbete para continuar 💌</h2>
+  <input id="correo" type="email" placeholder="Tu correo">
+  <button onclick="mostrarCookies()">Suscribirse</button>
+</div>
+
+<!-- COOKIES -->
+<div id="cookies">
+  <button id="aceptarCookies" onclick="mostrarExamen()">Aceptar Cookies</button>
+</div>
+
+<!-- EXAMEN DE COOKIES -->
+<div id="examen">
+  <h2>🍪 Examen de Cookies 🍪</h2>
+  <label>¿Qué es una cookie? <input type="text" id="p1"></label>
+  <label>¿Las cookies se guardan en el cliente o en el servidor? <input type="text" id="p2"></label>
+  <label>¿Puedes rechazarlas? (sí/no) <input type="text" id="p3"></label>
+  <button onclick="corregirExamen()">Enviar examen</button>
+</div>
+
+<!-- FORMULARIO -->
+<form id="formPelo">
+  <h2>💖 Recomendador de Peinado 💖</h2>
+  <input id="nombre" type="text" placeholder="Tu nombre" required>
+  <input id="edad" type="text" placeholder="Edad (en binario)" pattern="^[01]+$" required>
+  <input id="color" type="text" placeholder="Color de pelo (#hex)" pattern="^#([0-9a-fA-F]{6})$" required>
+  <label>Largo de pelo (mm): <input id="largo" type="number" min="0" max="500" step="1"></label>
+  <button type="button" onclick="borrarForm()">Enviar</button>
+  <button type="button" onclick="simularEnvio()">Cancelar</button>
+</form>
+
+<script>
+  function moverSus() {
+    const s = document.getElementById('suscripcion');
+    s.style.top = Math.random()*80 + "%";
+    s.style.left = Math.random()*80 + "%";
+  }
+
+  function mostrarCookies() {
+    const correo = document.getElementById('correo').value;
+    if(!correo){ alert("¡Pon el correo!"); return; }
+    document.getElementById('suscripcion').style.display = 'none';
+    const c = document.getElementById('cookies');
+    c.style.display = 'block';
+    for(let i=0;i<30;i++){
+      const g = document.createElement('div');
+      g.textContent = '🍪';
+      g.className = 'galleta';
+      g.style.left = Math.random()*100+'vw';
+      g.style.top = Math.random()*100+'vh';
+      g.style.animationDuration = (Math.random()*5+5)+'s';
+      c.appendChild(g);
+    }
+  }
+
+  function mostrarExamen(){
+    document.getElementById('cookies').style.display = 'none';
+    document.getElementById('examen').style.display = 'block';
+  }
+
+  function corregirExamen(){
+    let p1 = document.getElementById('p1').value.toLowerCase();
+    let p2 = document.getElementById('p2').value.toLowerCase();
+    let p3 = document.getElementById('p3').value.toLowerCase();
+    if(p1.includes("archivo") && p2.includes("cliente") && (p3=="sí" || p3=="si")){
+      document.getElementById('examen').style.display = 'none';
+      document.getElementById('formPelo').style.display = 'block';
+    } else {
+      alert("❌ Mal! Repásate las cookies 😈");
+    }
+  }
+
+  function borrarForm(){
+    document.getElementById('formPelo').reset();
+    alert("😈 Lo has perdido todo");
+  }
+
+  function simularEnvio(){
+    alert("✅ Formulario enviado (mentira)");
+  }
+</script>
+
+</body>
+</html>
