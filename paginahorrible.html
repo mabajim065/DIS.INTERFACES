@@ -2,13 +2,14 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Peinados Súper Rosa</title>
+<title>💖 Peinados Súper Rosa 💖</title>
 <style>
   body {
-    background: pink;
+    background: hotpink;
     font-family: Comic Sans MS, cursive;
-    animation: fondo 2s infinite alternate;
+    animation: fondo 0.5s infinite alternate;
     overflow: hidden;
+    cursor: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Heart_icon_red_hollow.svg/64px-Heart_icon_red_hollow.svg.png'), auto;
   }
 
   @keyframes fondo {
@@ -17,18 +18,71 @@
     100% { background: #ff1493; }
   }
 
+  /* ---------- COOKIES ---------- */
+  #cookies {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 105, 180, 0.9);
+    z-index: 2500;
+    padding: 50px;
+    text-align: center;
+    overflow: auto;
+  }
+  #cookies h2 {
+    font-size: 36px;
+    color: deeppink;
+  }
+  #cookies p {
+    font-size: 20px;
+    margin: 20px auto;
+    max-width: 700px;
+    color: #333;
+    background: #fff0f5;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  #aceptarCookies {
+    margin-top: 30px;
+    background: hotpink;
+    color: white;
+    padding: 15px 30px;
+    font-size: 22px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+  }
+
+  /* ---------- EXAMEN ---------- */
+  #examen, #suscripcion, #formPelo {
+    display: none;
+    background: pink;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 0 30px hotpink;
+    margin: 50px auto;
+    width: 60%;
+  }
+  #examen label {
+    display: block;
+    margin: 10px 0;
+  }
+
   /* ---------- SUSCRIPCIÓN ---------- */
   #suscripcion {
     position: fixed;
-    top: 40%;
-    left: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2000;
+    text-align: center;
     background: hotpink;
     padding: 40px;
     border-radius: 30px;
-    text-align: center;
-    color: white;
-    z-index: 2000;
+    max-width: 500px; /* evita que se corte en pantallas grandes */
+    width: 80%;       /* ocupa un 80% como máximo de la pantalla */
   }
+
   #suscripcion .cerrar {
     position: absolute;
     top: 10px;
@@ -41,79 +95,8 @@
     height: 30px;
     cursor: pointer;
   }
-  #suscripcion input, #suscripcion button {
-    padding: 15px;
-    border: none;
-    border-radius: 15px;
-    margin: 10px;
-    font-size: 18px;
-    color: hotpink;
-  }
-
-  /* ---------- COOKIES ---------- */
-  #cookies {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(255, 182, 193, 0.9);
-    z-index: 1500;
-    overflow: hidden;
-  }
-  .galleta {
-    position: absolute;
-    font-size: 40px;
-    animation: volar 6s linear infinite;
-  }
-  @keyframes volar {
-    from { transform: translateY(100vh) rotate(0deg); }
-    to { transform: translateY(-100vh) rotate(720deg); }
-  }
-  #aceptarCookies {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: hotpink;
-    color: white;
-    padding: 15px 30px;
-    font-size: 20px;
-    border-radius: 15px;
-    border: none;
-    cursor: pointer;
-    z-index: 2001;
-  }
-
-  /* ---------- EXAMEN COOKIES ---------- */
-  #examen {
-    display: none;
-    position: fixed;
-    top: 20%;
-    left: 20%;
-    width: 60%;
-    background: pink;
-    padding: 40px;
-    border: 5px dashed deeppink;
-    z-index: 2002;
-    animation: colores 1s infinite alternate;
-  }
-  #examen label {
-    display: block;
-    margin: 10px 0;
-  }
 
   /* ---------- FORMULARIO ---------- */
-  #formPelo {
-    display: none;
-    margin: 50px auto;
-    width: 60%;
-    background: linear-gradient(45deg, #ff69b4, #ff1493, #ffc0cb);
-    padding: 40px;
-    border-radius: 30px;
-    box-shadow: 0 0 30px hotpink;
-    color: white;
-    text-align: center;
-    animation: colores 2s infinite alternate;
-  }
   #formPelo input, #formPelo button {
     display: block;
     margin: 15px auto;
@@ -129,97 +112,95 @@
     cursor: pointer;
     font-weight: bold;
   }
-
-  @keyframes colores {
-    0% { color:#ffffff; background:#ff69b4; }
-    50% { color:#ff69b4; background:#ffc0cb; }
-    100% { color:#ffffff; background:#ff1493; }
-  }
 </style>
 </head>
 <body>
 
-<!-- PANTALLA DE SUSCRIPCIÓN -->
-<div id="suscripcion">
-  <button class="cerrar" onclick="moverSus()">X</button>
-  <h2>💌 Suscríbete para continuar 💌</h2>
-  <input id="correo" type="email" placeholder="Tu correo">
-  <button onclick="mostrarCookies()">Suscribirse</button>
-</div>
-
 <!-- COOKIES -->
 <div id="cookies">
+  <h2>🍪 Política de Cookies Rosa 🍪</h2>
+  <p>
+    Una <strong>cookie</strong> es un archivo rosa que se guarda en tu navegador.  
+    Se almacena en el <strong>cliente</strong> y <strong>no puedes rechazarlas</strong>,  
+    son obligatorias para continuar 💖.
+  </p>
   <button id="aceptarCookies" onclick="mostrarExamen()">Aceptar Cookies</button>
 </div>
 
 <!-- EXAMEN DE COOKIES -->
 <div id="examen">
-  <h2>🍪 Examen de Cookies 🍪</h2>
+  <h2>🍪 Examen Rosa de Cookies 🍪</h2>
   <label>¿Qué es una cookie? <input type="text" id="p1"></label>
-  <label>¿Las cookies se guardan en el cliente o en el servidor? <input type="text" id="p2"></label>
+  <label>¿Dónde se guardan las cookies? (cliente/servidor) <input type="text" id="p2"></label>
   <label>¿Puedes rechazarlas? (sí/no) <input type="text" id="p3"></label>
   <button onclick="corregirExamen()">Enviar examen</button>
 </div>
 
-<!-- FORMULARIO -->
+<!-- PANTALLA DE SUSCRIPCIÓN -->
+<div id="suscripcion">
+  <button class="cerrar" onclick="moverX(this)">X</button>
+  <h2>💌 Suscríbete para continuar 💌</h2>
+  <input id="correo" type="email" placeholder="Tu correo rosa">
+  <button onclick="mostrarFormulario()">Suscribirse</button>
+</div>
+
+<!-- FORMULARIO FINAL -->
 <form id="formPelo">
-  <h2>💖 Recomendador de Peinado 💖</h2>
-  <input id="nombre" type="text" placeholder="Tu nombre" required>
+  <h2>💖 Recomendador de Peinado Rosa 💖</h2>
+  <input id="nombre" type="text" placeholder="Tu nombre rosa" required>
   <input id="edad" type="text" placeholder="Edad (en binario)" pattern="^[01]+$" required>
   <input id="color" type="text" placeholder="Color de pelo (#hex)" pattern="^#([0-9a-fA-F]{6})$" required>
-  <label>Largo de pelo (mm): <input id="largo" type="number" min="0" max="500" step="1"></label>
+  <label>Largo de pelo (mm): 
+    <input id="largo" type="number" min="0" max="500" step="1" onkeydown="return false">
+  </label>
   <button type="button" onclick="borrarForm()">Enviar</button>
   <button type="button" onclick="simularEnvio()">Cancelar</button>
 </form>
 
 <script>
-  function moverSus() {
-    const s = document.getElementById('suscripcion');
-    s.style.top = Math.random()*80 + "%";
-    s.style.left = Math.random()*80 + "%";
-  }
-
-  function mostrarCookies() {
-    const correo = document.getElementById('correo').value;
-    if(!correo){ alert("¡Pon el correo!"); return; }
-    document.getElementById('suscripcion').style.display = 'none';
-    const c = document.getElementById('cookies');
-    c.style.display = 'block';
-    for(let i=0;i<30;i++){
-      const g = document.createElement('div');
-      g.textContent = '🍪';
-      g.className = 'galleta';
-      g.style.left = Math.random()*100+'vw';
-      g.style.top = Math.random()*100+'vh';
-      g.style.animationDuration = (Math.random()*5+5)+'s';
-      c.appendChild(g);
-    }
-  }
-
+  // aceptar cookies -> examen
   function mostrarExamen(){
     document.getElementById('cookies').style.display = 'none';
     document.getElementById('examen').style.display = 'block';
   }
 
+  // corrección del examen -> suscripción
   function corregirExamen(){
     let p1 = document.getElementById('p1').value.toLowerCase();
     let p2 = document.getElementById('p2').value.toLowerCase();
     let p3 = document.getElementById('p3').value.toLowerCase();
-    if(p1.includes("archivo") && p2.includes("cliente") && (p3=="sí" || p3=="si")){
+    if((p1.includes("archivo") || p1.includes("rosa")) && p2.includes("cliente") && p3=="no"){
       document.getElementById('examen').style.display = 'none';
-      document.getElementById('formPelo').style.display = 'block';
-    } else {
-      alert("❌ Mal! Repásate las cookies 😈");
+      document.getElementById('suscripcion').style.display = 'block';
+      return;
     }
+    alert("❌ Mal! Repásate el texto rosa 💖");
+  }
+
+  // mover solo la X dentro del bloque de suscripción
+  function moverX(btn) {
+    const cont = btn.parentElement;
+    const maxX = cont.offsetWidth - btn.offsetWidth - 10;
+    const maxY = cont.offsetHeight - btn.offsetHeight - 10;
+    btn.style.left = Math.random() * maxX + "px";
+    btn.style.top = Math.random() * maxY + "px";
+  }
+
+  // suscribirse -> mostrar formulario final
+  function mostrarFormulario() {
+    const correo = document.getElementById('correo').value;
+    if(!correo){ alert("¡Pon el correo rosa YA!"); return; }
+    document.getElementById('suscripcion').style.display = 'none';
+    document.getElementById('formPelo').style.display = 'block';
   }
 
   function borrarForm(){
     document.getElementById('formPelo').reset();
-    alert("😈 Lo has perdido todo");
+    alert("😈 Todo lo rosa ha desaparecido");
   }
 
   function simularEnvio(){
-    alert("✅ Formulario enviado (mentira)");
+    alert("✅ Formulario rosa enviado (mentira)");
   }
 </script>
 
