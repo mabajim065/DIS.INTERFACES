@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Datos</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            background-color: rgb(255, 220, 255);
+            padding: 20px;
+            text-align: center;
+        }
+
+        tfoot td {
+            background: #666;
+            color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <thead>
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="2">Estudiante</th>
+                    <th colspan="3">Calificación</th>
+                </tr>
+                <tr>
+                    <th>1º ev.</th>
+                    <th>2º ev.</th>
+                    <th>3º ev.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bernardo</td>
+                    <td>5.7</td>
+                    <td>8.3</td>
+                    <td>8.9</td>
+                </tr>
+                <tr>
+                    <td>Remigio</td>
+                    <td>4.7</td>
+                    <td>4.7</td>
+                    <td>1.3</td>
+                </tr>
+                <tr>
+                    <td>Ana</td>
+                    <td>9.7</td>
+                    <td>9.7</td>
+                    <td>9.9</td>
+                </tr>
+            <tfoot>
+                <tr>
+                    <td>ref</td>
+                    <td>5.0</td>
+                    <td>5.0</td>
+                    <td>5.0</td>
+                </tr>
+            </tfoot>
+            </tbody>
+        </table>
+</body>
+
+</html>
