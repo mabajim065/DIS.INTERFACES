@@ -1,109 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad 3 - Presentación</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Poppins:wght@400;600&display=swap"
-        rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
     <style>
+        /* Estilos base */
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box; 
         }
 
         body {
-            background-color: #eee;
-            min-height: 100vh;
+            /* Establece Poppins como fuente base, ya que Lora solo se usará en el h2 */
+            font-family: 'Poppins', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            min-height: 100vh;
+            background-color: #f0f0f0;
         }
 
-        /* Contenedor principal para centrar la sección */
-        .presentacion-container {
-            max-width: 600px;
-            width: 90%;
-        }
-
-        /* Actividad 3 - Requisito 2: Crea una sección con clase presentacion */
+        /* 2. Crea una sección con clase .presentacion que: */
         .presentacion {
-            /* tenga un fondo con background-image (URL de ejemplo) */
-            background-image: url('https://picsum.photos/600/350?nature');
-            /* background-size: cover */
+            
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                              url('https://picsum.photos/800/600'); 
+
             background-size: cover;
-            /* padding grande de 2rem */
             padding: 2rem;
-            /* borde redondeado */
-            border-radius: 12px;
+            border-radius: 10px;
+            max-width: 600px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            color: white;
-            /* Color base para el texto */
+            color: white; 
         }
 
-        /* Actividad 3 - Requisito 3: El título h2 debe usar la fuente Lora y color blanco. */
+        /* 3. El título h2 debe usar la fuente Lora y color blanco. */
         .presentacion h2 {
             font-family: 'Lora', serif;
             color: white;
-            font-size: 2.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            font-size: 2em; /* Tamaño del ejemplo */
             margin-bottom: 0.5rem;
         }
 
-        /* Actividad 3 - Requisito 4: Usa un selector hermano adyacente (+) para aplicar margen al párrafo que siga a un h2. */
-        .presentacion h2+p {
-            margin-top: 1.5rem;
-            /* Margen aplicado al párrafo que sigue al h2 */
-            font-size: 1.1rem;
-            line-height: 1.5;
-            margin-bottom: 20px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+        /* 4. Usa un selector hermano adyacente (+) para aplicar margen al párrafo que siga a un h2. */
+        .presentacion h2 + p {
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.1em;
+            color: #ff9999; 
         }
 
-        /* Actividad 3 - Requisito 5: Añade una lista estilizada con círculos, fuente Poppins y color #222. */
+        /* 5. Añade una lista estilizada con círculos, fuente Poppins y color #222. */
         .presentacion ul {
+            /* Lista estilizada con círculos */
             list-style-type: circle;
+            /* Fuente Poppins  */
             font-family: 'Poppins', sans-serif;
             color: #222;
-            background-color: rgba(255, 255, 255, 0.9);
-            /* Fondo semi-transparente para ver el texto */
-            padding: 20px 20px 20px 40px;
+            
+            /* Contenedor blanco para la lista, como en el ejemplo */
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 1rem 2rem;
             border-radius: 8px;
-            margin-top: 30px;
+            width: 80%;
+            margin-left: 2rem; /* Margen  */
         }
-
+        
         .presentacion li {
-            padding: 5px 0;
-            transition: color 0.3s ease;
+            font-weight: 700; /* Negrita*/
+            padding: 0.2rem 0;
+            cursor: pointer;
         }
 
-        /* Actividad 3 - Requisito 6: Los elementos de lista cambiarán a color #4a8de3 con :hover. */
+        /* 6. Los elementos de lista cambiarán a color #4a8de3 con :hover. */
         .presentacion li:hover {
             color: #4a8de3;
-            cursor: pointer;
+            text-decoration: underline;
         }
     </style>
 </head>
-
 <body>
-    <div class="presentacion-container">
-        <section class="presentacion">
-            <h2>Presentación</h2>
 
-            <p>Me llamo Ana y esta es una pequeña sección de ejemplo.</p>
+    <section class="presentacion">
+        <h2>Presentación</h2>
 
-            <ul>
-                <li>Me gusta programar</li>
-                <li>Me gusta viajar</li>
-                <li>Me gusta diseñar</li>
-            </ul>
-        </section>
-    </div>
+        <p>Me llamo Ana y esta es una pequeña sección de ejemplo.</p>
+
+        <ul>
+            <li>Me gusta programar</li>
+            <li>Me gusta viajar</li>
+            <li>Me gusta diseñar</li>
+        </ul>
+    </section>
+    
 </body>
-
 </html>

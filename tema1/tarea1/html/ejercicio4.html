@@ -1,101 +1,67 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 4 - Bloque adaptable</title>
-
+    <title>Actividad 4 - Bloque Adaptable</title>
+    
     <style>
-        /* Actividad 4 - Requisito 2: Usa box-sizing: border-box; */
-        html {
+        /* REQUISITO 2: Usa box-sizing: border-box; */
+        * {
             box-sizing: border-box;
-        }
-
-        /* Aplica box-sizing: border-box a todos los elementos, incluyendo pseudo-elementos */
-        *,
-        *::before,
-        *::after {
-            box-sizing: inherit;
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
         }
 
-        body {
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        /* Actividad 4 - Requisito 1: Crea un bloque con id adaptable */
+        /* REQUISITO 1: Crea un bloque con id adaptable que: */
         #adaptable {
-            /* tenga background: #74b9ff */
-            background-color: #74b9ff;
-
-            /* margen interno y externo con unidades em */
-            /* padding: 20px (convertido a em para cumplir el requisito de unidad) */
-            padding: 1.5em;
-            /* margen externo para centrar y separación */
-            margin: 2em auto;
-
-            /* display: block */
-            display: block;
-
-            /* borde redondeado y sombra suave */
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            width: 90%;
-            max-width: 600px;
-            color: #222;
-            transition: background-color 0.3s;
+            /* - tenga background: #74b9ff */
+            background: #74b9ff;
+            /* - padding: 20px */
+            padding: 20px;
+            /* - margen interno y externo con unidades em */
+            margin: 1em; 
+            /* - display: block */
+            display: block; 
+            /* - borde redondeado y sombra suave */
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave */
+            max-width: 400px; /* Para simular el tamaño del ejemplo */
         }
-
-        /* Aseguramos que los elementos internos también usen unidades em para su margen interno */
-        #adaptable h3 {
+        
+        /* Estilos de texto dentro del bloque */
+        #adaptable h2 {
             margin-bottom: 0.5em;
-            font-size: 1.5em;
+            color: black; 
         }
 
-        #adaptable p {
-            margin-top: 0.5em;
-        }
-
-        /* ========================================================= */
-        /* Actividad 4 - Requisito 4: Media query para que: */
-
-        /* cuando la pantalla tenga menos de 500px, el fondo cambie a #ff7675 */
+        /* REQUISITO 4: Crea una media query para que: */
+        
+        /* Media Query 1: cuando la pantalla tenga menos de 500px, el fondo cambie a #ff7675 */
         @media screen and (max-width: 500px) {
             #adaptable {
-                background-color: #ff7675;
-                /* Fondo rojo/coral */
+                background: #ff7675;
             }
         }
 
-        /* cuando se imprima, el bloque tenga fondo blanco y borde negro */
+        /* Media Query 2: cuando se imprima, el bloque tenga fondo blanco y borde negro */
         @media print {
             #adaptable {
-                background-color: white;
+                background: white;
                 border: 1px solid black;
-                box-shadow: none;
-                color: black;
+                box-shadow: none; /* Quitamos la sombra para impresión */
             }
         }
 
-        /* ========================================================= */
     </style>
 </head>
-
 <body>
+
     <div id="adaptable">
-        <h3>Bloque adaptable</h3>
+        <h2>Bloque adaptable</h2>
         <p>Este bloque cambia de aspecto cuando la pantalla es pequeña o cuando lo imprimes.</p>
     </div>
-    <p style="position: fixed; bottom: 10px; font-size: 0.9em; color: #666;">
-        * Prueba a hacer la ventana más pequeña (menos de 500px) o a imprimir la página (Ctrl+P / Cmd+P) para ver los
-        cambios.
-    </p>
+    
 </body>
-
 </html>
