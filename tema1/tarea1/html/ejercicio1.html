@@ -4,19 +4,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 1 - Tarjeta Básica</title>
+    <title>Actividad 1 - Tarjeta básica</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/ejercicio1.css">
+
+    <style>
+        /* Actividad 1 - Requisito 1: Usa el selector universal (*) para eliminar los márgenes y paddings por defecto del navegador. */
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            /* Aplica la fuente importada */
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        /* Actividad 1 - Requisito 3: Crear un id llamado tarjeta */
+        #tarjeta {
+            /* color de fondo: #f0f4ff */
+            background-color: #f0f4ff;
+            /* padding: 20px */
+            padding: 20px;
+            /* borde redondeado: 10px */
+            border-radius: 10px;
+            /* ancho máximo de 320px */
+            max-width: 320px;
+            width: 90%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Actividad 1 - Requisito 4: Crear una clase llamada titulo con el color #1e3799. */
+        .titulo {
+            color: #1e3799;
+        }
+
+        /* Actividad 1 - Requisito 5: Define que los encabezados h2 con la clase titulo, tengan un tamaño de fuente de 1.4rem. */
+        h2.titulo {
+            font-size: 1.4rem;
+        }
+
+        /* Actividad 1 - Requisito 6: El párrafo que sea descendiente de tarjeta debe tener un margin-top de 10px. */
+        #tarjeta p {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        /* Actividad 1 - Requisito 7: El enlace que tenga atributo target="_blank" */
+        a[target="_blank"] {
+            /* color: #4a69bd */
+            color: #4a69bd;
+            /* peso de fuente: bold */
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        /* Actividad 1 - Requisito 7: pseudoclase:hover para cambiar su opacidad a 0.7 */
+        a[target="_blank"]:hover {
+            opacity: 0.7;
+        }
+    </style>
 </head>
 
 <body>
-
     <div id="tarjeta">
         <h2 class="titulo">Mi tarjeta</h2>
+
         <p>Esta es una descripción breve creada para el ejercicio.</p>
+
         <a href="#" target="_blank">Ver más</a>
     </div>
-
 </body>
 
 </html>
