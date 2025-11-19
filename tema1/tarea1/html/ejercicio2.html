@@ -4,17 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 2 - Perfil (Sin punto)</title>
+    <title>Actividad 2 - Perfil (Enlace Hover)</title>
 
     <style>
-        /* Actividad 2 - Requisito 1: Define variables CSS (custom properties) para una paleta de colores: */
+        /* Actividad 2 - Requisito 1: Define variables CSS (custom properties) */
         :root {
-            /* --principal: #4a8de3 */
             --principal: #4a8de3;
-            /* --secundario: hsl(255, 15%, 67%) */
             --secundario: hsl(255, 15%, 67%);
-            /* --acento: rgb(255, 180, 90) */
             --acento: rgb(255, 180, 90);
+            /* Color base (naranja) */
+            --acento-oscuro: rgb(230, 160, 80);
+            /* Color más oscuro para el hover */
         }
 
         * {
@@ -32,13 +32,7 @@
             padding: 20px;
         }
 
-        /* Contenedor principal para centrar el perfil */
-        .perfil-container {
-            max-width: 300px;
-            width: 100%;
-        }
-
-        /* Actividad 2 - Requisito 2: Crea un contenedor con id perfil */
+        /* Actividad 2 - Requisito 2: Contenedor con id perfil */
         #perfil {
             /* fondo var(--secundario) */
             background-color: var(--secundario);
@@ -46,20 +40,18 @@
             padding: 20px;
             /* borde redondeado */
             border-radius: 8px;
+            max-width: 300px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        /* Actividad 2 - Requisito 3: Añade una clase .nombre */
+        /* Actividad 2 - Requisito 3: Clase .nombre */
         .nombre {
             /* use var(--principal) */
             color: var(--principal);
             /* tamaño en em (1.5em) */
             font-size: 1.5em;
-            position: relative;
             margin-bottom: 10px;
         }
-
-        /* Actividad 2 - Requisito 6: Bloque de estilos para ::before ELIMINADO */
 
         /* Actividad 2 - Requisito 4: El párrafo debajo debe usar texto en gris rgba(0,0,0,0.8). */
         #perfil p {
@@ -67,22 +59,34 @@
             margin-bottom: 20px;
         }
 
-        /* Actividad 2 - Requisito 5: Crea un botón con clase .boton */
+        /* Actividad 2 - Requisito 5: Enlace <a> con clase .boton */
         .boton {
-            /* use el color var(--acento) */
-            background-color: var(--acento);
-            color: white;
-            border: none;
+            /* Estilo inicial de botón */
+            display: inline-block;
+            text-decoration: none;
             padding: 10px 15px;
             border-radius: 5px;
             cursor: pointer;
             font-weight: bold;
-            transition: background-color 0.3s;
+            transition: all 0.3s ease;
+            /* Transición para todo (fondo y texto) */
+
+            /* Colores base: fondo naranja y texto azul oscuro */
+            background-color: var(--acento);
+            /* Fondo naranja */
+            color: #1e3799;
+            /* Color de texto inicial (un azul oscuro) */
+            border: 2px solid #1e3799;
+            /* Borde para delimitarlo mejor */
         }
 
-        /* Actividad 2 - Requisito 5: y cambie con :hover. */
+        /* Actividad 2 - Requisito 5: Cambie con :hover (fondo y texto) */
         .boton:hover {
-            background-color: rgb(230, 160, 80);
+            /* FONDO MÁS OSCURO (como se pidió originalmente para el botón) */
+            background-color: var(--acento-oscuro);
+            /* TEXTO CAMBIADO (cumpliendo tu petición de que las letras cambien) */
+            color: white;
+            border-color: white;
         }
     </style>
 </head>
@@ -90,12 +94,11 @@
 <body>
     <div class="perfil-container">
         <div id="perfil">
-            <h3 class="nombre">
-                😊Perfil</h3>
+            <h3 class="nombre">Perfil</h3>
 
             <p>Soy estudiante de desarrollo web. Me gusta aprender estilos CSS.</p>
 
-            <button class="boton">Contáctame</button>
+            <a href="#" class="boton">Contáctame</a>
         </div>
     </div>
 </body>
