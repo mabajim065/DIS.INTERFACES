@@ -1,0 +1,57 @@
+/* 1. Selector universal (*) para eliminar márgenes y paddings por defecto */
+* {
+    margin: 0;
+    padding: 0;
+    /* Usar la fuente importada para todo el documento */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* 3. Estilos para el id llamado "tarjeta" */
+#tarjeta {
+    background-color: #f0f4ff;
+    /* color de fondo: #f0f4ff [cite: 9] */
+    padding: 20px;
+    /* padding: 20px [cite: 11] */
+    border-radius: 10px;
+    /* borde redondeado: 10px [cite: 12] */
+    max-width: 320px;
+    /* ancho máximo de 320px [cite: 13] */
+    margin: 50px auto;
+    /* Centrado en la página para mejor visualización */
+}
+
+/* 4. Estilos para la clase llamada "titulo" */
+.titulo {
+    color: #1e3799;
+    /* color: #1e3799 [cite: 14] */
+}
+
+/* 5. Selector de elemento y clase: encabezados h2 con la clase "titulo" */
+h2.titulo {
+    font-size: 1.4rem;
+    /* tamaño de fuente de 1.4rem [cite: 15] */
+}
+
+/* 6. Selector descendiente: el párrafo que es descendiente de #tarjeta */
+#tarjeta p {
+    margin-top: 10px;
+    /* margin-top de 10px [cite: 16] */
+}
+
+/* 7. Selector de atributo: el enlace con atributo target="_blank" */
+a[target="_blank"] {
+    color: #4a69bd;
+    /* color: #4a69bd [cite: 18] */
+    font-weight: bold;
+    /* peso de fuente: bold [cite: 19] */
+    text-decoration: none;
+    /* Estilo extra para el enlace */
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* 7. Pseudoclase :hover para cambiar su opacidad a 0.7 */
+a[target="_blank"]:hover {
+    opacity: 0.7;
+    /* cambiar su opacidad a 0.7 [cite: 20] */
+}
