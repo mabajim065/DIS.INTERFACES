@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 10 - Mi Página Completa</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background-color: #f5f5f5;
+        }
+
+      
+        .header {
+            background-color: #2c3e50;
+            padding: 10px 20px;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-right: 40px;
+        }
+
+        .nav-menu {
+            flex-grow: 1;
+            display: flex;
+            justify-content: flex-start;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-menu li a {
+            color: white;
+            text-decoration: none;
+            padding: 0 15px;
+            font-size: 0.95em;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .auth-buttons button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.9em;
+            background-color: #3498db;
+            color: white;
+        }
+
+        /* --- SECTION DE ARTÍCULOS (Actividad 9) --- */
+        .articles-section {
+            background-color: white;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .articles-section h2 {
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap; 
+            gap: 20px; 
+        }
+
+        .card {
+            flex-basis: calc(50% - 10px); 
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        /* Ajuste para la tarjeta 5 que ocupa una fila completa */
+        .card-full {
+            flex-basis: 100%;
+        }
+
+       
+        .footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 40px 20px;
+            
+            /* Flexbox para 3 columnas */
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .footer-col {
+            flex: 1; /* Distribuye las tres columnas uniformemente */
+        }
+
+        .footer-col h4 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            text-transform: uppercase;
+        }
+        
+        .footer-col a, .footer-col p {
+            color: #ccc;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">MiWeb</div>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Artículos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button class="btn-entrar">Entrar</button>
+            <button class="btn-registro">Registro</button>
+        </div>
+    </header>
+
+    <section class="articles-section">
+        <h2>Contenido destacado</h2>
+        
+        <div class="card-grid">
+            <div class="card">Tarjeta 1</div>
+            <div class="card">Tarjeta 2</div>
+            <div class="card">Tarjeta 3</div>
+            <div class="card">Tarjeta 4</div>
+            <div class="card card-full">Tarjeta 5</div>
+        </div>
+        
+    </section>
+
+    <footer class="footer">
+        <div class="footer-col">
+            <h4>Sobre nosotros</h4>
+            <p>Información breve de la página.</p>
+        </div>
+
+        <div class="footer-col">
+            <h4>Enlaces</h4>
+            <a href="#">Inicio</a>
+            <a href="#">Blog</a>
+            <a href="#">Contacto</a>
+        </div>
+
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <p>Email: ejemplo@correo.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>

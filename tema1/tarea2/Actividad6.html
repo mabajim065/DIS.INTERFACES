@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 6 - Grupo de Tarjetas</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 20px; 
+            background-color: #f0f0f0;
+        }
+
+       
+        .card-set {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px; 
+        }
+
+       
+        .card {
+            flex-basis: 300px; 
+            flex-grow: 1; 
+            flex-shrink: 1; 
+            
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            
+            display: flex;
+            flex-direction: column; 
+        }
+
+        
+        .card-header {
+            background-color: black;
+            color: white;
+            height: 40px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 10px; 
+        }
+
+       
+        .card-body {
+            background-color: white;
+            padding: 15px;
+            color: black;
+            flex-grow: 1;
+        }
+
+      
+        .card-footer {
+            background-color: #888888;
+            color: white;
+            height: 30px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 10px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-set">
+        <div class="card">
+            <header class="card-header">
+                <h2>Tarjeta Izquierda</h2>
+            </header>
+            <div class="card-body">
+                Contenido del cuerpo<br>
+                Contenido del cuerpo<br>
+                Contenido del cuerpo
+            </div>
+            <footer class="card-footer">
+                Pie
+            </footer>
+        </div>
+
+        <div class="card">
+            <header class="card-header">
+                <h2>Tarjeta centro</h2>
+            </header>
+            <div class="card-body">
+                Contenido del cuerpo
+            </div>
+            <footer class="card-footer">
+                Pie
+            </footer>
+        </div>
+
+        <div class="card">
+            <header class="card-header">
+                <h2>Tarjeta derecha</h2>
+            </header>
+            <div class="card-body">
+                Contenido del cuerpo
+            </div>
+            <footer class="card-footer">
+                Pie
+            </footer>
+        </div>
+    </div>
+
+</body>
+</html>

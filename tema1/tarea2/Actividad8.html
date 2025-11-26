@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 8 - Header con Flexbox</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        /* --- CONTENEDOR PRINCIPAL: EL HEADER --- */
+        .header {
+            background-color: #2c3e50; /* Color azul oscuro similar a la imagen */
+            padding: 10px 20px;
+            color: white;
+            
+            /* Habilitar Flexbox */
+            display: flex;
+            
+            /* REQUISITO CLAVE: Distribuye el espacio entre los tres bloques (Logo, Menú, Botones) */
+            justify-content: space-between; 
+            
+            /* Centra los elementos verticalmente */
+            align-items: center;
+        }
+
+        /* --- PARTE 1: LOGO --- */
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-right: 40px; /* Separación manual del menú */
+        }
+
+        /* --- PARTE 2: MENÚ DE NAVEGACIÓN --- */
+        .nav-menu {
+            /* Permite que el menú ocupe la mayor parte del espacio central disponible */
+            flex-grow: 1; 
+            display: flex; /* Flexbox para centrar los elementos del menú (Inicio, Artículos, Contacto) */
+            justify-content: flex-start; /* Alinea los ítems del menú a la izquierda */
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .nav-menu li a {
+            color: white;
+            text-decoration: none;
+            padding: 0 15px;
+            font-size: 0.95em;
+        }
+
+        /* --- PARTE 3: BOTONES DE ACCESO --- */
+        .auth-buttons {
+            display: flex;
+            gap: 10px; /* Separación entre los botones */
+        }
+
+        .auth-buttons button {
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 0.9em;
+            transition: background-color 0.3s;
+        }
+
+        .auth-buttons .btn-entrar {
+            background-color: #3498db; /* Azul claro */
+            color: white;
+        }
+
+        .auth-buttons .btn-registro {
+            background-color: #3498db; /* Verde */
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        
+        <div class="logo">
+            MiWeb
+        </div>
+
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Artículos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="auth-buttons">
+            <button class="btn-entrar">Entrar</button>
+            <button class="btn-registro">Registro</button>
+        </div>
+    </header>
+
+</body>
+</html>

@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Actividad 5 - Card con Flexbox</title>
     <style>
-        /* --- ESTILOS GENERALES Y RESETS --- */
+        
         body {
             font-family: sans-serif;
             display: flex;
-            /* Centrar la tarjeta en la página para mejor visualización */
+            /* Centrar la tarjeta en la página  */
             justify-content: center;
             align-items: center;
             min-height: 100vh;
@@ -18,70 +18,50 @@
             background-color: #f0f0f0;
         }
 
-        /* Aseguramos que los encabezados no tengan márgenes por defecto que rompan el centrado */
+        /* Aseguramos que los encabezados no tengan márgenes por defecto  */
         .card h2,
         .card h4 {
             margin: 0;
             padding: 0;
         }
 
-        /* --- CONTENEDOR PRINCIPAL: LA TARJETA --- */
+       
         .card {
             width: 300px;
-            /* Ancho arbitrario para la tarjeta */
-
-            /* REQUISITO: Sombreado ligero */
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             border-radius: 5px;
-            /* Bordes redondeados para un mejor look */
             overflow: hidden;
-            /* Oculta el sombreado en los bordes */
-
-            /* REQUISITO CLAVE: Activar Flexbox vertical */
             display: flex;
             flex-direction: column;
-            /* Apila el header, body y footer verticalmente */
             min-height: 350px;
         }
 
-        /* --- HEADER (Encabezado) --- */
         .card-header {
             background-color: black;
             color: white;
             padding: 20px 0;
-
-            /* REQUISITO CLAVE: Centrado Vertical y Horizontal */
             display: flex;
             justify-content: center;
-            /* Centrado horizontal */
             align-items: center;
-            /* Centrado vertical */
         }
-
-        /* --- BODY (Cuerpo) --- */
         .card-body {
             background-color: white;
             padding: 15px;
             color: black;
-
-            /* REQUISITO CLAVE: El cuerpo ocupa todo el espacio restante */
             flex-grow: 1;
-            /* Hace que el cuerpo se estire para llenar el espacio disponible */
+          
         }
 
-        /* --- FOOTER (Pie de página) --- */
+       
         .card-footer {
             background-color: #888888;
-            /* Gris similar a la imagen */
+            
             color: white;
             padding: 15px 0;
 
-            /* REQUISITO CLAVE: Centrado Vertical y Horizontal */
             display: flex;
             justify-content: center;
-            /* Centrado horizontal */
             align-items: center;
-            /* Centrado vertical */
         }
     </style>
 </head>
