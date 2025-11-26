@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 3</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+
+        .contenedor {
+            display: flex;
+            height: 100vh;
+            gap: 2px;
+        }
+
+        .sidebar,
+        .contenido {
+            padding: 12px 24px;
+            /* Vertical 12px, Lateral 24px */
+        }
+
+
+        .sidebar {
+            background-color: #89CFF0;
+            flex: 1;
+            /* esto significa que deltrozo que tenemos esto cupa una parta */
+        }
+
+
+        .contenido {
+            background-color: #D3E4CD;
+            flex: 4;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <div class="sidebar">
+            contenido lateral
+        </div>
+        <div class="contenido">
+            Esto sería el contenido principal
+        </div>
+    </div>
+
+</body>
+
+</html>

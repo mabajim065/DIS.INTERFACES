@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 2 - Menú Vertical</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        p {
+            margin-bottom: 20px;
+            line-height: 1.5;
+            max-width: 800px;
+        }
+
+        ul.menu-vertical {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            /*lo usamos para que se adapte al texto el fondo*/
+            display: inline-flex;
+            /* Esto es lo que pone los elementos uno debajo del otro */
+            flex-direction: column;
+
+        }
+
+        ul.menu-vertical li {
+            background-color: rgba(123, 198, 199, 0.8);
+            /*para que parezcan que estan separaditos*/
+            border-bottom: 2px solid rgb(255, 255, 255);
+        }
+
+        ul.menu-vertical li a {
+            display: block;
+            text-decoration: none;
+            color: black;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Actividad 2 — Menú vertical</h1>
+    <p>
+        Este ejercicio te pide que coloques un menu vertical en la parte izquierda de la página usando una
+        lista no ordenada y el modelo flexbox. La barra tendrá cinco enlaces y el ancho será el del item li
+        más ancho. La letra usada es sans-serif, el color de fondo es rgba(123,198,199,0.8). Lo importante
+        es lograr la disposición del menú.
+    </p>
+
+    <nav>
+        <ul class="menu-vertical">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Opciones</a></li>
+            <li><a href="#">Planes</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+</body>
+
+</html>
