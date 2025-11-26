@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 1</title>
+</head>
+
+<body>
+    <style>
+        /***************************************************************************************************
+            Actividad 1 — Menú horizontal
+        Este ejercicio te pide que coloques un menu horizontal en la parte superior de la página usando
+        una lista no ordenada y el modelo flexbox. La barra tendrá cinco enlaces y ocupa todo el ancho.
+        La letra usada es sans-serif, el color de fondo es rgba(123,198,199,0.8). Lo importante es lograr
+        la disposición del menú.
+        ******************************************************************************************************/
+        /* Quitamos márgenes automáticos del body para que el menú ocupe el ancho completo arriba */
+        body {
+            margin: 0;
+            /* letra sans-serif */
+            font-family: sans-serif;
+        }
+
+        .menu {
+            /*convierte la lista <ul> en un contenedor flex,haciendo  que los <li> se coloquen en horizontal*/
+            display: flex;
+            /*lo reparte to por el espacio que tiene y que se estan alineaos*/
+            justify-content: space-around;
+            /*color de ofndo*/
+            border: 1px solid black;
+            padding: 10px;
+            list-style: none;
+            margin: 0;
+            gap: 5px;
+        }
+
+        .menu li a {
+
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            background-color: rgba(123, 198, 199, 0.8);
+            display: block;
+            border: 1px solid black;
+        }
+    </style>
+
+    <ul class="menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Sobre nosotros</a></li>
+    </ul>
+</body>
+
+</html>
