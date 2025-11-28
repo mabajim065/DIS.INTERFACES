@@ -1,0 +1,62 @@
+* {
+    font-family: "story script";
+}
+
+body {
+    display: grid;
+    grid-template-areas: "header header header"
+        "nav main aside"
+        "footer footer footer";
+    grid-template-columns: 200px, 1fr, 200px;
+    gap: 10px;
+    padding: 10px;
+}
+
+table,
+th,
+td {
+    border: 0.5px solid black;
+    padding: 20px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+main {
+    grid-area: main;
+    background: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+header {
+    grid-area: header;
+    background: rgb(210, 252, 255);
+}
+
+
+footer {
+    grid-area: footer;
+    background: rgb(166, 255, 251);
+}
+
+nav {
+    grid-area: nav;
+    background: rgb(205, 255, 204);
+}
+
+li {
+    list-style: none;
+    background: #ffd493;
+    padding: 10px 20px;
+    border-bottom: 5px solid rgb(205, 255, 204);
+    align-items: center;
+    border-radius: 5px;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+aside {
+    grid-area: aside;
+    background: rgb(248, 191, 255);
+}
