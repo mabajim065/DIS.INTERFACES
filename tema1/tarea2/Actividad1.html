@@ -1,76 +1,44 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 1 Menú Horizontal</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menú exacto</title>
     <style>
-        /* Estilos generales para la tipografía */
         body {
-            font-family: sans-serif;
-            margin: 20px;
-        }
-
-        h1 {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        p {
-            margin-bottom: 20px;
-            line-height: 1.5;
-        }
-
-        ul.menu {
-            list-style-type: none;
             margin: 0;
-            padding: 0;
+            font-family: sans-serif;
+        }
+
+        ul {
             display: flex;
-            width: 100%;
+            list-style: none;
+            margin: 20px;
+            padding: 0;
         }
 
-        ul.menu li {
-            /* Hace que cada botón crezca para ocupar el espacio disponible */
-            flex-grow: 1;
-            background-color: rgba(123, 198, 199, 0.8);
-            /* Crea la línea blanca separadora */
+        li {
+            background: #7bc6c7;
+            padding: 8px 20px;
             border-right: 2px solid white;
-
         }
 
-
-        ul.menu li a {
-            display: block;
-            /*para que no se haga pequeñin al tamaño de la letra*/
-            /* Quita el subrayado */
-            text-decoration: none;
-            color: black;
-            padding: 10px 15px;
-
+        li:last-child {
+            border-right: none;
         }
     </style>
 </head>
 
 <body>
 
-    <h1>Actividad 1 — Menú horizontal</h1>
-    <p>
-        Este ejercicio te pide que coloques un menu horizontal en la parte superior de la página usando
-        una lista no ordenada y el modelo flexbox. La barra tendrá cinco enlaces y ocupa todo el ancho.
-        La letra usada es sans-serif, el color de fondo es rgba(123,198,199,0.8). Lo importante es lograr
-        la disposición del menú.
-    </p>
-
-    <nav>
-        <ul class="menu">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Opciones</a></li>
-            <li><a href="#">Planes</a></li>
-            <li><a href="#">Contacto</a></li>
-        </ul>
-    </nav>
+    <ul>
+        <li>Home</li>
+        <li>Servicios</li>
+        <li>Opciones</li>
+        <li>Planes</li>
+        <li>Contacto</li>
+    </ul>
 
 </body>
 
