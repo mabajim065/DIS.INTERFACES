@@ -3,56 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actividad 7 - Layout de Columnas y Filas</title>
+    <title>Actividad 7 </title>
     <style>
         body {
-            margin: 0;
-            padding: 20px;
             font-family: sans-serif;
             background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px; 
+            min-height: 100vh;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
         }
 
-        .contenedor-principal {
+        .main-container {
+            width: 800px; 
+            height: 400px;
             display: flex;
-            height: 500px;
+            background-color: #ffffff; 
+            border: 1px solid #ccc; 
+        }
+        .columna {
+            padding: 24px; 
+            box-sizing: border-box;
+            display: flex;
         }
 
         .columna-izquierda {
-            background-color: #0e7c74;
-            flex: 2;
-            padding: 24px;
+         
+            flex: 2; 
+            background-color: #0e7c74; 
+            color: #ffffff;
+           
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5em;
         }
 
         .columna-derecha {
-            flex: 1;
+            
+            flex: 1; 
+            background-color: #ffffff;
             display: flex;
             flex-direction: column; 
+        }
+
+        .fila {
+            flex: 1; 
             padding: 24px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            box-sizing: border-box;
+            color: #333;
         }
-
-        .derecha-parte-alta, .derecha-parte-baja {
-            flex: 1;
-            background-color: white;
-            border: 1px solid lightgray;
-        }
-
-        .derecha-parte-alta {
-            margin-bottom: 2px;
-        }
+       
     </style>
 </head>
 <body>
 
-    <div class="contenedor-principal">
-        <div class="columna-izquierda">
+    <div class="main-container">
+        <div class="columna columna-izquierda">
             Columna izquierda
         </div>
-        
-        <div class="columna-derecha">
-            <div class="derecha-parte-alta">
+        <div class="columna columna-derecha">
+            <div class="fila fila-superior">
                 Derecha parte alta
             </div>
-            <div class="derecha-parte-baja">
+            <div class="fila fila-inferior">
                 Derecha parte baja
             </div>
         </div>

@@ -1,66 +1,88 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="utf-8">
-    <title>Actividad 5</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 5 </title>
     <style>
         body {
-            margin: 0;
-            height: 100vh;
+            font-family: sans-serif;
+            background-color: #f0f0f0;
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #f0f0f0;
-            font-family: sans-serif;
+            min-height: 100vh;
+            margin: 0;
         }
 
         .card {
             width: 300px;
+        
+            background-color: #ffffff;
+            overflow: hidden; 
             display: flex;
             flex-direction: column;
-            background: white;
         }
 
-        header,
-        footer {
+        .card-header {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 20px 10px;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 50px;
+            text-align: center;
         }
 
-        header {
-            background: #000000;
-            color: #f0f0f0;
+        .card-header h2 {
+            margin: 0;
+            font-size: 1.5em;
+            font-weight: normal; 
         }
 
-        footer {
-            background: #a8a8a8;
-            color: #f0f0f0;
-        }
-
-        .body {
-            height: 200px;
+        .card-body {
+            background-color: #ffffff; 
+            padding: 20px;
             flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100px;
+            color: #333; 
+            font-size: 0.9em;
+        }
+
+        .card-footer {
+            background-color: #808080;
+            color: #ffffff;
+            padding: 15px 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .card-footer h4 {
+            margin: 0;
+            font-size: 1em;
+            font-weight: normal; 
         }
     </style>
 </head>
-
 <body>
 
     <div class="card">
-        <header>
+        <div class="card-header">
             <h2>Tarjeta de presentación</h2>
-        </header>
-        <div class="body">
-            Contenido del cuerpo de la tarjeta.
         </div>
-        <footer>
+        <div class="card-body">
+            <p>Contenido del cuerpo de la tarjeta</p>
+        </div>
+        <div class="card-footer">
             <h4>Pie de la tarjeta</h4>
-        </footer>
+        </div>
     </div>
 
 </body>
-
 </html>
