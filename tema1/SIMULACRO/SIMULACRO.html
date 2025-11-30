@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="simulacro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Story+Script&display=swap" rel="stylesheet">
+    <title>simulacro</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <h3> Prueba DAW2 HTML-CSS </h3>
+    </header>
+
+
+    <nav>
+        <ul>
+            <li>inicio</li>
+            <li>cursos</li>
+            <li>Contacto</li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="card-set">
+    <h2>Cursos disponibles</h2>
+    
+    <div class="cards-container"> 
+        
+        <article class="card">
+            <div class="card-img"></div> 
+            <div class="card-texto">
+                HTML & CSS
+                <button class="btn-vermas">Ver más</button>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-img"></div>
+            <div class="card-texto">
+                JavaScript
+                <button class="btn-vermas">Ver más</button>
+            </div>
+        </article>
+
+        <article class="card">
+            <div class="card-img"></div>
+            <div class="card-texto">
+                Diseño Web
+                <button class="btn-vermas">Ver más</button>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        <!-- la tabla -->
+        <table>
+            <h3>Precios y disponibilidad</h3>
+            <thead>
+                <tr>
+                    <th colspan="2">tramo horario</th>
+                    <th>curso</th>
+                    <th>nivel</th>
+                    <th>horas</th>
+                    <th>estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th rowspan="2" colspan="2">mañana</th>
+                    <th>html & css</th>
+                    <th>basico</th>
+                    <th> 40 </th>
+                    <th> abierto </th>
+
+                </tr>
+                <tr>
+                    <th>JavaScript</th>
+                    <th>medio</th>
+                    <th> 60 </th>
+                    <th> cerrado </th>
+                </tr>
+                <tr>
+                    <th colspan="5">total</th>
+                    <th> 100 </th>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- formulario -->
+        <form action="/action_page.php">
+            <fieldset>
+        <h3> Formulario de inscripcion</h3>
+        
+        <input type="text" id="nombre" name="nombre" placeholder="nombre y apellidos"><br>
+        
+        <input type="text" id="email" name="email" placeholder="Email"><br>
+        
+        <input type="date" /><br> 
+
+        <select name="transporte">
+            <option value="coche">online</option>
+            <option value="avion">offline</option>
+        </select> <br>
+        <input type="checkbox" id="tr1" name="coche" value="Coche">
+        <label for="tr1">acepto terminos</label><br>
+        <textarea id="coment" name="comentarios" rows="5" cols="50" placeholder="comentarios"></textarea><br>
+        <input type="submit" value="Enviar ">
+
+    </fieldset>
+</form>
+    </main>
+    
+    <aside>
+        <p> Informacion Adicional</p>
+    </aside>
+    
+    <footer class="footer">
+        <div class="footer-col">
+            <h4>2025 TechAcademy</h4>
+        </div>
+    </footer>
+</body>
+</html>

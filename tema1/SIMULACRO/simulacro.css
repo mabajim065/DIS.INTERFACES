@@ -1,0 +1,133 @@
+* {
+    font-family: "story script";
+}
+/*********************************************************************/
+body {
+    display: grid;
+    grid-template-areas: "header header header"
+        "nav main aside"
+        "footer footer footer";
+    grid-template-columns: 200px, 1fr, 200px;
+    gap: 10px;
+    padding: 10px;
+}
+h3{
+    text-align: center;
+}
+/********************************************************************/
+.cards-container {
+    display: flex;
+    justify-content: space-around; 
+    gap: 20px;
+}
+.card {
+    flex-basis: 100%; 
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    background-color: #ffd493;
+}
+.card-img {
+    background-color: white;
+    height: 60px;
+    border: 1px solid #ccc;
+    margin: 5px;
+}
+.card-texto {
+    text-align: center;
+    padding: 15px 10px;
+    color: black;
+}
+.cards-container button{
+ background-color: #A9C99A;
+ border: 0px;
+ 
+}
+/********************************************************************/
+table{
+border-collapse: collapse;
+   width: 100%;
+   margin: 20px auto;
+}
+
+table th, table td {
+    border: 1px solid #777;
+}
+thead th {
+    background-color: #9FB6C3;
+}
+tbody tr:nth-child(2) th, 
+tbody tr:nth-child(2) td {
+    background-color: #fff6e2;
+}
+
+/***********************************************************************/
+fieldset{
+    border: none; 
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%; 
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+select {
+    background-color: #ECECEC;
+}
+.card-set input[type="submit"],
+input[type="submit"] {
+    width: 100%; 
+    background-color: #A9C99A;
+    border-radius: 4px;
+    border: 0px ;
+}
+/**************************************************************************/
+
+main {
+    grid-area: main;
+    background: rgb(255, 255, 255);
+    padding: 10px;
+}
+/*****************************************************************************/
+header {
+    grid-area: header;
+    background: rgb(210, 252, 255);
+}
+
+/*************************************************************************/
+footer {
+    grid-area: footer;
+    background: rgb(166, 255, 251);
+    text-align: center;
+}
+/**************************************************************************/
+nav {
+    grid-area: nav;
+    background: rgb(205, 255, 204);
+}
+nav ul {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+
+}
+ nav ul li {
+    list-style: none;
+    background: #ffd493;
+    padding: 10px 20px;
+    border-bottom: 5px solid rgb(205, 255, 204);
+    border-radius: 5px;
+    
+} 
+/********************************************************************************/
+
+aside {
+    grid-area: aside;
+    background: rgb(248, 191, 255);
+    display: flex;
+    align-items: center;
+}
+/***************************************************************/
