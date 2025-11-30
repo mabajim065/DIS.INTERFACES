@@ -106,28 +106,27 @@ footer {
 /**************************************************************************/
 nav {
     grid-area: nav;
-    background: rgb(205, 255, 204);
+    background: #E6F7E6; 
+    padding-top: 50px;
 }
 nav ul {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
+    
+    align-items: center
 
 }
  nav ul li {
     list-style: none;
     background: #ffd493;
     padding: 10px 20px;
-    border-bottom: 5px solid rgb(205, 255, 204);
+    border-bottom: 5px solid #E6F7E6;
     border-radius: 5px;
-    
 } 
 /********************************************************************************/
-
 aside {
     grid-area: aside;
     background: rgb(248, 191, 255);
     display: flex;
     align-items: center;
+    text-align: center;
 }
 /***************************************************************/
