@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actividad 7 - Header Grid</title>
+    <style>
+        body { margin: 0; font-family: sans-serif; }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center; 
+        }
+
+     
+        nav {
+            display: grid;
+            grid-auto-flow: column; 
+            justify-content: center; 
+        }
+        
+        nav a {
+            color: #ddd;
+            text-decoration: none;
+        }
+
+        
+        .botones {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 10px;
+        }
+
+        button {
+            background-color: #3498db;
+            border: none;
+            color: white;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><h2>mariaweb</h2></div>
+
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Artículos</a>
+            <a href="#">Contacto</a>
+        </nav>
+
+        <div class="botones">
+            <button>Entrar</button>
+            <button>Registro</button>
+        </div>
+    </header>
+
+</body>
+</html>

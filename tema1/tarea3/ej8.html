@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actividad 8 - Layout Grid</title>
+    <style>
+       
+        body { 
+            margin: 0; 
+            font-family: sans-serif; 
+            background-color: #f4f4f4; 
+        }
+
+       
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            display: grid;
+            grid-template-columns: auto 1fr auto; 
+            align-items: center; 
+            gap: 20px;
+        }
+
+        .menu {
+            display: grid;
+            grid-auto-flow: column; 
+            justify-content: center; 
+            gap: 20px;
+        }
+        
+        .menu a { 
+            color: white; 
+            text-decoration: none; 
+        }
+        .auth { 
+            display: grid; 
+            grid-template-columns: auto auto; 
+            gap: 10px; 
+        }
+        .btn { 
+            padding: 5px 15px; 
+            background: #3498db; 
+            border: none; color: white; 
+            cursor: pointer; }
+        .logo h2 { 
+            margin: 0; }
+
+       
+        .contenedor-principal {
+            display: grid;
+            grid-template-columns: 250px 1fr; 
+            gap: 30px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        aside {
+            background: white;
+            padding: 20px;
+            height: fit-content;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        h2, h3 { 
+            margin-top: 0; }
+        
+
+        .grid-articulos {
+            display: grid;
+            [cite_start]
+            grid-template-columns:repeat(4, 1fr);
+            gap: 20;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 4px; /* Ligero redondeo */
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            min-height: 60px;
+            display: grid;
+            place-items: center;
+        }
+
+        
+        .w-50  { 
+            grid-column: span 2; } 
+        .w-25  { 
+            grid-column: span 1; } 
+        .w-75  { 
+            grid-column: span 3; } 
+        .w-100 { 
+            grid-column: span 4; } 
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><h2>MiWeb</h2></div>
+        
+        <nav class="menu">
+            <a href="#">Inicio</a>
+            <a href="#">Artículos</a>
+            <a href="#">Contacto</a>
+        </nav>
+
+        <div class="auth">
+            <button class="btn">Entrar</button>
+            <button class="btn">Registro</button>
+        </div>
+    </header>
+
+    <div class="contenedor-principal">
+        
+        <aside>
+            <h3>Enlaces útiles</h3>
+            <p>Contenido del aside</p>
+        </aside>
+
+        <section>
+            <h2>Últimos artículos</h2>
+            
+            <div class="grid-articulos">
+                <div class="card w-50">Tarjeta E (50%)</div>
+                <div class="card w-50">Tarjeta B (50%)</div>
+
+                <div class="card w-25">Tarjeta C (25%)</div>
+                <div class="card w-75">Tarjeta D (75%)</div>
+
+                <div class="card w-100">Tarjeta A (100%)</div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actividad 5</title>
+    <style>
+        body { margin: 0; font-family: sans-serif; height: 100vh; }
+
+        .main-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            height: 100%;
+        }
+
+        .col-left {
+            background-color: #ffffff;
+            color: rgb(7, 7, 7);
+            padding: 20px;
+            border: 20px solid #0a5c56;
+        }
+
+        .col-right {
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        .row-item {
+            border: 20px solid #0a5c56; 
+            display: grid;
+            place-items: center; 
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-layout">
+        <div class="col-left">
+            <h2>Columna Izquierda</h2>
+        </div>
+        <div class="col-right">
+            <div class="row-item">Fila 1</div>
+            <div class="row-item">Fila 2</div>
+        </div>
+    </div>
+</body>
+</html>

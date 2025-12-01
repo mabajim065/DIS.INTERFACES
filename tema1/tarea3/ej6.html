@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actividad 6</title>
+    <style>
+        body { 
+            background-color: #eee; 
+            font-family: sans-serif; 
+            padding: 20px; }
+
+        .grid-puzzle {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 15px;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            min-height: 50px;
+            display: grid;
+            align-items: center;
+        }
+        
+        
+        .card-e { 
+            grid-column: span 2; } 
+        .card-b { 
+            grid-column: span 2; } 
+
+     
+        .card-c { 
+            grid-column: span 1; } 
+        .card-d { 
+            grid-column: span 3; } 
+
+        
+        .card-a { 
+            grid-column: span 4; } 
+
+    </style>
+</head>
+<body>
+    <div class="grid-puzzle">
+        <div class="card card-e">Tarjeta E (50%)</div>
+        <div class="card card-b">Tarjeta B (50%)</div>
+        
+        <div class="card card-c">Tarjeta C (25%)</div>
+        <div class="card card-d">Tarjeta D (75%)</div>
+        
+        <div class="card card-a">Tarjeta A (100%)</div>
+    </div>
+</body>
+</html>

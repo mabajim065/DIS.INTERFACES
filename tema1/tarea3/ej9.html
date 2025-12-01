@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actividad 9 </title>
+    <style>
+        body { 
+            margin: 0; 
+            font-family: sans-serif; 
+            background-color: #f0f2f5; 
+        }
+
+        header {
+            background-color: #1a2d40;
+            color: white;
+            padding: 15px 30px;
+            display: grid;
+            grid-template-columns: auto 1fr auto; 
+            align-items: center;
+            gap: 20px;
+        }
+
+        .menu {
+            display: grid;
+            grid-auto-flow: column;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .menu a { 
+            color: #ddd; 
+            text-decoration: none; }
+        .auth { 
+            display: grid; 
+            grid-template-columns: auto auto; 
+            gap: 10px; }
+        .btn { 
+            padding: 8px 15px; 
+            background: #3498db; 
+            border: none; color: white; 
+            border-radius: 3px; 
+            cursor: pointer; }
+        
+
+        main {
+            padding: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .grid-destacado {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            min-height: 50px;
+            display: grid;
+            place-items: center;
+        }
+
+        .full-width {
+            grid-column: span 2; 
+        }
+        
+        
+
+        footer {
+            background-color: #1a252f;
+            color: white;
+            padding: 40px;
+            margin-top: 40px;
+            
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .footer-col {
+            display: grid;
+            gap: 10px; 
+            align-content: start;
+        }
+
+        footer p, footer a { 
+            color: #bdc3c7; 
+            font-size: 0.9em; 
+            text-decoration: none; 
+            line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><h2>MiWeb</h2></div>
+        
+        <nav class="menu">
+            <a href="#">Inicio</a>
+            <a href="#">Artículos</a>
+            <a href="#">Contacto</a>
+        </nav>
+
+        <div class="auth">
+            <button class="btn">Entrar</button>
+            <button class="btn">Registro</button>
+        </div>
+    </header>
+
+    <main>
+        <h2>Contenido destacado</h2>
+        <div class="grid-destacado">
+            <div class="card">Tarjeta 1</div>
+            <div class="card">Tarjeta 2</div>
+            
+            <div class="card">Tarjeta 3</div>
+            <div class="card">Tarjeta 4</div>
+            
+            <div class="card full-width">Tarjeta 5</div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-col">
+            <h4>Sobre nosotros</h4>
+            <p>Información breve de la página.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Enlaces</h4>
+            <a href="#">Inicio</a>
+            <a href="#">Blog</a>
+            <a href="#">Contacto</a>
+        </div>
+        <div class="footer-col">
+            <h4>Contacto</h4>
+            <p>Email: ejemplo@correo.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>
