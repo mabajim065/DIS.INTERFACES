@@ -13,6 +13,7 @@
 
 <body>
 
+    <!-- esto lo podria haber metido todo en un div en vez del body-->
     <header class="header">
         <h3> Prueba DAW2 HTML-CSS </h3>
     </header>
@@ -28,36 +29,36 @@
 
     <main>
         <div class="card-set">
-    <h3>Cursos disponibles</h3>
-    
-    <div class="cards-container"> 
-        
-        <article class="card">
-            <div class="card-img"></div> 
-            <div class="card-texto">
-                HTML & CSS
-                <button class="btn-vermas">Ver más</button>
-            </div>
-        </article>
+            <h3>Cursos disponibles</h3>
 
-        <article class="card">
-            <div class="card-img"></div>
-            <div class="card-texto">
-                JavaScript
-                <button class="btn-vermas">Ver más</button>
-            </div>
-        </article>
+            <div class="cards-container">
 
-        <article class="card">
-            <div class="card-img"></div>
-            <div class="card-texto">
-                Diseño Web
-                <button class="btn-vermas">Ver más</button>
+                <article class="card">
+                    <div class="card-img"></div>
+                    <div class="card-texto">
+                        HTML & CSS
+                        <button class="btn-vermas">Ver más</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img"></div>
+                    <div class="card-texto">
+                        JavaScript
+                        <button class="btn-vermas">Ver más</button>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-img"></div>
+                    <div class="card-texto">
+                        Diseño Web
+                        <button class="btn-vermas">Ver más</button>
+                    </div>
+                </article>
+
             </div>
-        </article>
-        
-    </div>
-</div>
+        </div>
 
         <!-- la tabla -->
         <table>
@@ -96,35 +97,36 @@
         <!-- formulario -->
         <form action="/action_page.php">
             <fieldset>
-        <h3> Formulario de inscripcion</h3>
-        
-        <input type="text" id="nombre" name="nombre" placeholder="nombre y apellidos"><br>
-        
-        <input type="text" id="email" name="email" placeholder="Email"><br>
-        
-        <input type="date" /><br> 
+                <h3> Formulario de inscripcion</h3>
 
-        <select name="transporte">
-            <option value="coche">online</option>
-            <option value="avion">offline</option>
-        </select> <br>
-        <input type="checkbox" id="tr1" name="coche" value="Coche">
-        <label for="tr1">acepto terminos</label><br>
-        <textarea id="coment" name="comentarios" rows="5" cols="50" placeholder="comentarios"></textarea><br>
-        <input type="submit" value="Enviar ">
+                <input type="text" id="nombre" name="nombre" placeholder="nombre y apellidos"><br>
 
-    </fieldset>
-</form>
+                <input type="text" id="email" name="email" placeholder="Email"><br>
+
+                <input type="date" /><br>
+
+                <select name="transporte">
+                    <option value="coche">online</option>
+                    <option value="avion">offline</option>
+                </select> <br>
+                <input type="checkbox" id="tr1" name="coche" value="Coche">
+                <label for="tr1">acepto terminos</label><br>
+                <textarea id="coment" name="comentarios" rows="5" cols="50" placeholder="comentarios"></textarea><br>
+                <input type="submit" value="Enviar ">
+
+            </fieldset>
+        </form>
     </main>
-    
+
     <aside>
         <p> Informacion Adicional</p>
     </aside>
-    
+
     <footer class="footer">
         <div class="footer-col">
             <h4>2025 TechAcademy</h4>
         </div>
     </footer>
 </body>
+
 </html>
